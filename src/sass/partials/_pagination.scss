@@ -1,0 +1,72 @@
+////////////////////////////////////////
+// Pagination
+////////////////////////////////////////
+
+.pagination {
+  font-size: .7rem;
+  color: #bbb;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  &-body {
+    width: 100%;
+    display: table;
+  }
+
+  &-previous,
+  &-current,
+  &-next {
+    width: 33.33%;
+    text-align: center;
+    display: table-cell;
+  }
+
+  &-previous {
+    text-align: left;
+  }
+
+  &-current {
+    text-align: center;
+  }
+
+  &-next {
+    text-align: right;
+  }
+
+  &-next, &-previous {
+    a {
+      border: solid .15rem #ddd;
+      border-radius: 10rem;
+      font-weight: bold;
+      color: #5f5f5f;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: .75rem 1.5rem;
+      display: inline-block;
+      transition: .2s border;
+
+      &:hover {
+        border-color: #bbb;
+      }
+    }
+  }
+}
+
+// XS screens
+@media (max-width: 575px) {
+  .pagination {
+    margin: 2rem 0;
+
+    &-body {
+      display: block;
+    }
+    &-previous,
+    &-current,
+    &-next {
+      width: auto;
+      text-align: center;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
+}

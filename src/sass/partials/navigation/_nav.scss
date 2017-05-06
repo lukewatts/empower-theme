@@ -1,0 +1,160 @@
+@import "menu-button";
+
+////////////////////////////////////////
+// Navigation menu
+////////////////////////////////////////
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 18rem;
+  font-size: .9rem;
+  color: #ddd;
+  background-color: #222;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(9rem);
+  transition: .4s transform;
+
+	h3 {
+	  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	  color: inherit;
+	  font-size: .8rem;
+	  text-transform: uppercase;
+	}
+}
+
+.nav-block {
+  border-bottom: solid 1px #2c2c2c;
+  padding: 2rem;
+
+	&:last-child {
+	  border-bottom: none;
+	}
+}
+
+// Animate the nav menu when opened 
+.page-wrap {
+  min-height: 100%;
+  position: relative;
+  background: white;
+  transition: .4s transform;
+}
+
+.nav-open {
+	.nav {
+	  transform: translateX(0);
+	}
+
+	.page-wrap {
+	  transform: translateX(-18rem);
+	}
+}
+
+// Logo, title, tagline 
+.nav-title {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.nav-tagline {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.nav-logo img {
+  max-width: 100%;
+  max-height: 2rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+// Nav menu 
+.nav-menu a {
+  color: #aaa;
+  text-decoration: none;
+  padding: .5rem 0;
+  display: block;
+  transition: .2s color;
+
+	&:hover {
+	  color: #09d;
+	}
+
+	&.current {
+	  color: white;
+	}
+}
+
+// Search box 
+.nav-search input[type="search"] {
+  width: 100%;
+  font-family: inherit;
+  font-size: .8rem;
+  color: white;
+  border: solid 1px #323232;
+  background: #323232;
+  border-radius: 2rem;
+  padding: .5rem 1rem;
+  display: block;
+  -webkit-appearance: none;
+
+	&:focus {
+	  outline: none;
+	}
+}
+
+// Tag list 
+.nav-tags .tag {
+  float: left;
+  margin-right: .25rem;
+  margin-bottom: .25rem;
+}
+
+// Share 
+.nav-share .share-button {
+  width: calc(50% - .5rem);
+  float: left;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+// Copyright 
+.nav-copyright {
+  font-size: .8rem;
+
+	p {
+	  margin-bottom: .5rem;
+
+		&:last-child {
+		  margin-bottom: 0;
+		}
+	}
+
+	.nav-published-with {
+	  color: #5f5f5f;
+	}
+
+	a {
+	  color: inherit;
+	  text-decoration: none;
+	  transition: .2s color;
+
+		&:hover {
+		  color: #09d;
+		}
+	}
+}
+
+// Small screens 
+@media (max-width: 767px) {
+  .nav {
+    width: 16rem;
+  }
+
+  .nav-open .page-wrap {
+    transform: translateX(-16rem);
+  }
+}

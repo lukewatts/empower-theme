@@ -1,0 +1,92 @@
+////////////////////////////////////////
+// Menu button
+////////////////////////////////////////
+.nav-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: none;
+  border: none;
+  border-radius: .25rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: .8;
+  transition: .2s opacity;
+  -webkit-appearance: none;
+
+	&:hover {
+	  opacity: 1;
+	}
+
+	&:focus {
+	  outline: none;
+	}
+
+	// Small screens 
+	@media (max-width: 767px) {
+	    top: 1rem;
+	    right: 1rem;
+	}
+}
+
+// Navicon 
+.navicon {
+  position: relative;
+  width: 1.5rem;
+  height: 5px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 2px;
+
+	&::before,
+	&::after {
+	  position: absolute;
+	  display: block;
+	  content: '';
+	  height: 5px;
+	  width: 1.5rem;
+	  background: white;
+	  transition: .3s;
+	  border-radius: 2px;
+	}
+}
+
+// Navicon should be black when no cover is present 
+.no-cover .navicon,
+.no-cover .navicon::before,
+.no-cover .navicon::after {
+  background-color: #484848;
+}
+
+.navicon {
+	&::before {
+	  top: -10px;
+	}
+
+	&::after {
+	  top: 10px;
+	}
+}
+
+.nav-open .navicon {
+  background: transparent;
+
+	// Animated into an X when nav is open 
+	&::before,
+	&::after {
+	  top: 0 !important;
+	}
+}
+
+.nav-open .nav-toggle .navicon{
+	&::before {
+	  transform: rotate(-45deg);
+	}
+
+	&::after {
+	  transform: rotate(45deg);
+	}
+}

@@ -1,0 +1,81 @@
+////////////////////////////////////////
+// Post loop
+////////////////////////////////////////
+
+.loop {
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: .2s color;
+
+    &:hover {
+      color: #555;
+    }
+  }
+
+  &-item {
+    position: relative;
+    background-color: white;
+    padding: 6rem 0;
+    overflow: hidden;
+
+    // Featured ribbon
+    &-featured::before {
+      content: 'Featured';
+      width: 10rem;
+      font-size: .8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: #8cc152;
+      position: absolute;
+      top: 1.25rem;
+      right: -2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      color: white;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    &:nth-child(even) {
+      background-color: #f8f8f8;
+    }
+  }
+
+  &-title {
+    line-height: 1.2;
+  }
+
+  &-excerpt {
+    font-family: "Noto Serif", serif;
+    line-height: 1.8;
+  }
+
+  &-meta {
+    font-size: .8rem;
+    color: #999;
+    margin-top: 2rem;
+  }
+
+  &-author img {
+    width: 1.4rem;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: .25rem;
+  }
+}
+
+// Medium screens
+@media (max-width: 991px) {
+  .loop-item {
+    padding: 4rem 0;
+  }
+}
+
+// Small screens
+@media (max-width: 767px) {
+  .loop-item {
+    padding: 2rem 0;
+  }
+}

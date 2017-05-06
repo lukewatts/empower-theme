@@ -1,0 +1,117 @@
+//////////////////////////////// 
+// The basics
+////////////////////////////////
+html 
+  height: 100%
+  box-sizing: border-box
+  font-size: 19px // 1rem
+  padding: 0
+  margin: 0
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+body
+  height: 100%
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+  font-weight: 400
+  line-height: 1.4
+  color: #484848
+  padding: 0
+  margin: 0
+
+h1, h2, h3, h4, h5, h6 
+  font-family: Montserrat, sans-serif
+  color: #333
+  margin-top: 0
+  margin-bottom: 1rem
+
+h1 
+  font-size: 2.75rem
+
+h2 
+  font-size: 2.25rem
+
+h3 
+  font-size: 1.75rem
+
+h4 
+  font-size: 1.5rem
+
+// Small screens
+@media (max-width: 767px)
+  h1 
+    font-size: 2
+  
+  h2 
+    font-size: 1.75rem
+  
+  h3 
+    font-size: 1.5rem
+  
+  h4 
+    font-size: 1.25rem
+
+p 
+  margin-top: 0
+  margin-bottom: 1.25rem
+
+a 
+  color: inherit
+  text-decoration: underline
+
+blockquote 
+  font-style: italic
+  border-left: solid .4rem #333
+  padding-left: 2rem
+  margin-left: -2rem
+  margin-bottom: 1rem
+
+button 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+  font-size: .9rem
+  height: 1.8rem
+  padding: .35rem 1rem
+  border: none
+  background-color: #09d
+  border-radius: .15rem
+  color: white
+  display: inline-block
+  -webkit-appearance: none
+
+code 
+  font-family: monospace
+  background-color: #fbfbfb
+  border: solid 1px #f1f1f1
+  border-radius: .15rem
+  padding: .1rem .25rem
+
+hr 
+  border: none
+  border-top: solid 1px #e5e5e5
+  margin: 1rem 0
+
+input 
+  border: solid 1px #e2e2e2
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+  font-size: .9rem
+  height: 1.8rem
+  border-radius: .15rem
+  color: #5f5f5f
+  padding: .25rem .5rem
+  display: inline-block
+  transition: .2s border-color
+  -webkit-appearance: none
+
+input:focus 
+  border-color: #bbb
+  outline: none
+
+pre 
+  font-family: monospace
+  background-color: #fbfbfb
+  border: solid 1px #f1f1f1
+  border-radius: .15rem
+  padding: 1rem
+  margin-bottom: 1rem
+  overflow-x: auto

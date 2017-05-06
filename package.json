@@ -1,0 +1,32 @@
+{
+  "name": "empower-theme",
+  "version": "1.0.0",
+  "description": "The default theme for Postleaf.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp css:dev",
+    "dist": "gulp css:dist",
+    "watch": "gulp css:watch",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukewatts/empower-theme.git"
+  },
+  "keywords": [
+    "postleaf",
+    "postleaf-theme",
+    "empower-theme"
+  ],
+  "author": "Cory Laviska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Postleaf/empower-theme/issues"
+  },
+  "homepage": "https://github.com/Postleaf/empower-theme#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}

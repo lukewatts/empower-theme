@@ -1,0 +1,49 @@
+////////////////////////////////////////
+// Main footer
+////////////////////////////////////////
+.footer {
+  background: white;
+  font-size: .8rem;
+  color: #bbb;
+  padding: 1rem;
+
+  &-content {
+    width: 100%;
+    display: table;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: .2s color;
+
+      &:hover {
+        color: #444;
+      }
+    }
+  }
+
+  &-left,
+  .footer-right {
+    display: table-cell;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+// Small screens
+@media (max-width: 767px) {
+  .footer {
+    font-size: .7rem;
+
+    &-content {
+      display: block;
+    }
+    &-left,
+    &-right {
+      text-align: center;
+      display: block;
+    }
+  }
+}
