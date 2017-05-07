@@ -1,8 +1,8 @@
 'use strict';
 
-const path 			= require('path');
-const gulp 			= require('gulp');
-const sass 			= require('gulp-sass');
+const path 				= require('path');
+const gulp 				= require('gulp');
+const sass 				= require('gulp-sass');
 const sourcemaps 	= require('gulp-sourcemaps');
 
 var path_to = {
@@ -17,7 +17,7 @@ var path_to = {
 gulp.task('default', ['css:dist']);
 
 gulp.task('css:watch', () => {
-	gulp.watch([path_to.src.sass + '/**/*.scss', path_to.src.sass + '/**/*.sass'], ['sass']);
+	gulp.watch([path_to.src.sass + '/**/*.scss', path_to.src.sass + '/**/*.sass'], ['css:dev']);
 });
 
 gulp.task('css:dev', () => {

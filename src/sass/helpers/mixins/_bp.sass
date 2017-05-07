@@ -1,0 +1,11 @@
+$default-breakpoint: medium !default
+$breakpoints-min: (small: 480px, medium: 768px, large: 980px) !default
+$breakpoints-max: (small: 575px, medium: 767px, large: 991px, x-large: 1199px, xx-large: 1200px) !default
+ 
+=bp-min($size: unquote($default-breakpoint), $breakpoints: $breakpoints-min)
+  @media (min-width: map-get($breakpoints, $size))
+    @content
+
+=bp-max($size: unquote($default-breakpoint), $breakpoints: $breakpoints-max)
+  @media (max-width: map-get($breakpoints, $size))
+    @content
